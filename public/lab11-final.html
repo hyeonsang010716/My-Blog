@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Jeju</title>
+  <link rel="stylesheet" href="css/style11-final.css">
+</head>
+
+<body>
+
+  <div id="container">    
+    <header>
+      <div id="logo">
+        <a href="index.html">
+          <h1>Dream Jeju</h1>
+        </a>
+      </div>
+      <nav>
+        <ul id="topMenu">
+          <li><a href="#">단체 여행 <span>▼</span></a>
+            <ul>
+              <li><a href="#">회사 연수</a></li>
+              <li><a href="#">수학 여행</a></li>
+            </ul>
+          </li>
+          <li><a href="#">맞춤 여행  <span>▼</span></a>
+            <ul>
+              <li><a href="#">4.3 평화 기행</a></li>
+              <li><a href="#">곶자왈 체험</a></li>
+              <li><a href="#">힐링 워크샵</a></li>
+            </ul>
+          </li>
+          <li><a href="#">갤러리</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="slideShow">
+      <div id="slides">
+        <img src="images/photo-1.jpg" alt="">
+        <img src="images/photo-2.jpg" alt="">
+        <img src="images/photo-3.jpg" alt="">
+        <img src="images/photo-4.jpg" alt="">
+        <img src="images/photo-5.jpg" alt="">
+      </div>
+      <button id="prev">&lang;</button>
+      <button id="next">&rang;</button>
+      <div id="slide-buttons">
+        <div loc="1" class="buttons">1</div>
+        <div loc="2" class="buttons">2</div>
+        <div loc="3" class="buttons">3</div>
+        <div loc="4" class="buttons">4</div>
+        <div loc="5" class="buttons">5</div>
+      </div>
+    </div>
+
+    <div id="contents">
+      <div id="tabMenu">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">공지사항</label>
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2">갤러리</label>      
+        <input type="radio" id="tab3" name="tabs">
+        <label for="tab3">할일리스트</label>
+        <input type="radio" id="tab4" name="tabs">
+        <label for="tab4">딥러닝(로컬)</label>
+        <input type="radio" id="tab5" name="tabs">
+        <label for="tab5">딥러닝(서버)</label>
+        <input type="radio" id="tab6" name="tabs">
+        <label for="tab6">전통시장</label>
+        <input type="radio" id="tab7" name="tabs">
+        <label for="tab7">공유칠판</label>
+        <input type="radio" id="tab8" name="tabs">
+        <label for="tab8">웹채팅</label>
+
+        <div id="notice" class="tabContent">
+          <h2>공지사항 내용입니다.</h2>
+          <ul>            
+            <li>사무실을 이전했습니다</li>
+            <li>[참가 모집] 카약 체험에 초대합니다.</li>
+            <li>[참가 모집] 여름 방학 기간, 오름 체험단을 모집합니다.</li>
+            <li>겨울, 추천 여행지</li>
+            <li>가을, 추천 여행지</li>            
+          </ul>
+        </div>
+        <div id="gallery" class="tabContent">
+          <h2>갤러리 내용입니다.</h2>
+          <ul>
+            <li><img src="images/img-1.jpg"></li>
+            <li><img src="images/img-2.jpg"></li>
+            <li><img src="images/img-3.jpg"></li>
+            <li><img src="images/img-1.jpg"></li>
+            <li><img src="images/img-2.jpg"></li>
+            <li><img src="images/img-3.jpg"></li>                     
+          </ul>
+        </div>        
+        <div id="todolist" class="tabContent">
+          <div id="container-todolist">
+            <h1>Web Programming</h1>
+            <p>공부할 주제를 기록해 보세요</p>
+            <p>공부가 끝난 것은 휴지통을 클릭해서 삭제할 수 있습니다.</p>
+            <form action="">
+              <input type="text" id="subject" autofocus>
+              <button onclick="newRegister(); return false;">추가</button>
+            </form>
+            <hr>  
+            <ul id="itemList"></ul>  
+          </div>
+        </div>
+        <div id="dl" class="tabContent">
+          <div id="dl-container">
+            <div id="dl-custom-file-upload">
+              (이미지 파일을 선택하세요) 
+              <input id="dl-file-upload" type="file" accept="image/*" />
+            </div>
+            <div id="dl-image-container"></div>
+            <p id="dl-status"></p>
+          </div> 
+        </div> 
+        <div id="backend-dl" class="tabContent">
+          <div id="backend-dl-container">
+            <main class="container">
+              <div id="image-container"></div>
+              <p id="status"></p>
+            </main>
+
+            <div>
+              <input class="upload-name" id="inputFile" value="이미지파일" placeholder="이미지파일">
+              <label for="selectFile" id="fileLabel">파일찾기</label> 
+              <input type="file" name="uploadFile" id="selectFile"  />
+              <input type="button" id="imageList" value="리스트" />
+              <input type='image' src="images/upload16.png" id="imageUpload" value='업로드' />
+              <input type="button" id="detectObject" value="탐지" />
+              <input type="button" id="textConversion" value="인지" />
+              <input type="image" src="images/reset.png" id="resetImage" alt="reset" width="15" height="15" />
+              <input type='image' src="images/download16.png" id="imageDownload" value='다운로드' />
+              <input type="text" id="remoteFile" size=15 value="" />
+              <input type='image' src="images/change16.png" id="nameChange" value='이름변경' />
+              <input type="button" id="deleteImage" value="삭제" />
+            </div>
+        
+            <label for="dl-result">결과</label>
+            <div id="dl-result" name="dl-result">
+              <textarea id="dl-area" name="dl-area" rows="10" cols="50">
+              </textarea>
+            </div>
+          </div> 
+        </div> 
+        <div id="market" class="tabContent">
+          <div id="maptitle"><h3 id="mapH">경상남도 전통시장 현황</h3></div>
+          <button id="mapdraw">지도그리기</button> <br>
+          <!-- 지도를 표시할 div 입니다 -->
+          <div id="map"></div>
+        </div>
+        <div id="whiteboard">
+          <button id="pen" class="only">펜</button>
+          <button id="eraser" class="only">지우개</button>
+          <input id="wid" type="range" min="1" max="10" value="1" />
+          <!--  -->
+          <select id="color-select">
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+          </select>
+          <input type="image" src="images/reset.png" id="reset" width="15" height="15" />
+          <!--  -->
+          <br />
+          <canvas id="canvas" width="597px" height="513px"></canvas>
+        </div>
+
+        <!--  -->
+        <div id="chat">
+          <h2 class="chatTag">채팅 서비스</h2>
+          <input id="nick" type="text" size="10" maxlength="50" placeholder="이름 입력..."/>
+          <input id="message" type="text" size="50" maxlength="500" placeholder="메시지 입력..."/>
+          <button id="chatsend" class="only">보내기</button>
+          <br/><br/>
+          <textarea id="chat-log" cols="77" rows="30"></textarea>
+        </div>
+        <!--  -->
+      </div>
+
+
+      <div id="links">
+        <ul>
+          <li>
+            <a href="#">
+              <span id="quick-icon1"></span>
+              <p>평화기행</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon2"></span>
+              <p>힐링 워크샵</p>
+            </a>            
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon3"></span>
+              <p>문의하기</p>
+            </a>            
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon1"></span>
+              <p>평화기행</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon2"></span>
+              <p>힐링 워크샵</p>
+            </a>            
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon3"></span>
+              <p>문의하기</p>
+            </a>            
+          </li>
+        </ul>
+      </div>
+    </div> 
+
+    <footer>    
+      <div id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">여행약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div id="sns">
+          <ul>
+            <li><a href="#"><img src="images/sns-1.png"></a></li>
+            <li><a href="#"><img src="images/sns-2.png"></a></li>
+            <li><a href="#"><img src="images/sns-3.png"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="company">
+        <p>제주특별자치도 ***동 ***로 *** (대표전화) 123-456-7890</p> 
+      </div>     
+    </footer> 
+
+  </div> 
+
+  <script src="js/slideshow.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/frontend_detection.js" type="module"></script>
+  <script src="js/backend-dl-final.js" type="module"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=9f49daf03831469765a6aa8422b94433&libraries=clusterer"></script>
+  <script src="js/traditional-market-async-await_only.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/whiteboard.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
